@@ -1,0 +1,147 @@
+v<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Validation</title>
+    <style>
+        body {
+            background-color: #F2E9E4;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #336699;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            margin-top: 10px;
+            color: #336699;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        input[type="tel"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #336699;
+            border-radius: 4px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        input[type="button"] {
+            border: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+            background-color: #336699;
+            color: white;
+        }
+
+        .error {
+            color: red;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+            color: #336699;
+        }
+    </style>
+    <script>
+        // JavaScript validation code here...
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <form>
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+            <span id="firstNameError" class="error"></span><br>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+            <span id="lastNameError" class="error"></span><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <span id="emailError" class="error"></span><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <span id="passwordError" class="error"></span><br>
+
+            <label for="rePassword">Re-enter Password:</label>
+            <input type="password" id="rePassword" name="rePassword" required>
+            <span id="rePasswordError" class="error"></span><br>
+
+            <label>Gender:</label>
+            <label for="male">Male</label>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="female">Female</label>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="other">Other</label>
+            <input type="radio" id="other" name="gender" value="other" required>
+            <span id="genderError" class="error"></span><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            <span id="ageError" class="error"></span><br>
+
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" required>
+            <span id="phoneNumberError" class="error"></span><br>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            <span id="addressError" class="error"></span><br>
+
+            <label for="state">State:</label>
+            <input type="text" id="state" name="state" required>
+            <span id="stateError" class="error"></span><br>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select</option>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+            </select>
+            <span id="countryError" class="error"></span><br><br>
+
+            <label>Languages:</label>
+            <label for="english">English</label>
+            <input type="checkbox" id="english" name="languages" value="english">
+            <label for="spanish">Kannada</label>
+            <input type="checkbox" id="spanish" name="languages" value="spanish">
+            <label for="french">Hindi</label>
+            <input type="checkbox" id="french" name="languages" value="french">
+            <span id="languagesError" class="error"></span><br><br>
+            
+            <input type="checkbox" id="declaration" name="declaration" required>
+            <label for="declaration">Declaration:</label>
+            <span id="declarationError" class="error"></span><br>
+
+            <input type="button" value="Submit" onclick="validateForm()">
+
+            <p id="output"></p>
+        </form>
+    </div>
+</body>
+
+</html>
